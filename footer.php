@@ -5,10 +5,10 @@
         <?php wp_nav_menu(array(
             'theme_location' => 'main-menu',
             'container' => 'nav',
-            'container_class' => 'main-menu'
+            'container_class' => 'footer-menu'
         )); ?>
 
-        <p>All Rights Reserved. <?php echo get_bloginfo('name') . " " . date('Y'); ?></p>
+        <p class="copyright">All Rights Reserved. <?php echo get_bloginfo('name') . " " . date('Y'); ?></p>
     </div>
 </footer>
 </body>

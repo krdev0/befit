@@ -143,3 +143,52 @@ img {
 .main-menu .current-menu-item {
     border-bottom: 2px solid var(--primary);
 }
+
+/** Footer **/
+.site-footer {
+    border-top: 1px solid var(--lightGray);
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .footer-menu {
+        display: flex;
+    }
+
+    .site-footer .footer-menu .menu {
+        display: flex;
+        gap: 2.4rem;
+    }
+
+    .site-footer .footer-menu li {
+        display: flex;
+        align-items: center;
+    }
+
+    .site-footer .footer-menu a {
+        font-family: var(--mainFont);
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        color: var(--black);
+        font-weight: bold;
+    }
+}
+
+.copyright {
+    text-align: right;
+    margin: 0;
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    justify-self: flex-end;
+    font-size: 1.8rem;
+}
