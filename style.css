@@ -144,6 +144,21 @@ img {
     border-bottom: 2px solid var(--primary);
 }
 
+/** Mobile Menu **/
+@media (min-width: 768px) {
+    .slicknav_menu {
+        display: none;
+    }
+}
+
+.slicknav_menu {
+    background-color: var(--darkGray);
+}
+
+/* .slicknav_btn {
+    background-color: var(--primary);
+} */
+
 /** Footer **/
 .site-footer {
     border-top: 1px solid var(--lightGray);
