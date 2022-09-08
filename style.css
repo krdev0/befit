@@ -16,7 +16,7 @@
     --secondaryFont: 'Antonio', sans-serif;
 
     /** Colors **/
-    --primary: #EEE870;
+    --primary: #ffad3a;
     --darkGray: #2F2E2E;
     --lightGray: #EBEBEB;
 
@@ -88,6 +88,19 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/** Utilities **/
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.section {
+    padding: 5rem 0;
 }
 
 
@@ -206,4 +219,38 @@ img {
     text-transform: uppercase;
     justify-self: flex-end;
     font-size: 1.8rem;
+}
+
+/** Page template **/
+.featured-image {
+    margin-bottom: 3rem;
+}
+
+.page h1 {
+    margin-bottom: 3rem;
+}
+
+.page .content p {
+    margin: 0;
+}
+
+.page.no-sidebar {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/** Page with sidebar **/
+@media (min-width: 768px) {
+    .page.with-sidebar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .with-sidebar .page-content {
+        flex: 0 0 calc(60% - 2rem);
+    }
+
+    .with-sidebar .sidebar {
+        flex: 0 0 calc(40% - 2rem);
+    }
 }

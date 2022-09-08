@@ -7,6 +7,8 @@
 
 add_action('init', 'befit_register_menu');
 add_action('wp_enqueue_scripts', 'befit_scripts');
+add_action('after_setup_theme', 'befit_setup');
+add_action('widgets_init', 'befit_widgets');
 
 
 function befit_register_menu()
@@ -36,4 +38,28 @@ function befit_scripts()
     wp_enqueue_script('slicknavjs', get_template_directory_uri() . '/js/jquery.slicknav.min.js', 'jquery', '1.0.10', true);
 
     wp_enqueue_script('script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0', true);
+}
+
+function befit_setup()
+{
+    //Register image sizes
+    add_image_size('befitSquare', 340, 340, true);
+    add_image_size('befitPortrait', 340, 724, true);
+    add_image_size('befitBox', 400, 375, true);
+    add_image_size('befitMedium', 800, 400, true);
+    add_image_size('befitLarge', 1280, 650, true);
+
+    add_theme_support('post-thumbnails');
+}
+
+function befit_widgets()
+{
+    register_sidebar(array(
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
 }
