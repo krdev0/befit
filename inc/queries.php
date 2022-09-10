@@ -4,7 +4,7 @@ function befit_classes_list()
 { ?>
     <ul class="classes-list">
         <?php $args = array(
-            'post_type' => 'befit_clases'
+            'post_type' => 'class'
         );
 
         $classes = new WP_Query($args);

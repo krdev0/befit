@@ -6,6 +6,15 @@
             <?php the_post_thumbnail('befitMedium', array('class' => 'featured-image')); ?>
         <?php endif; ?>
 
+        <?php if (get_post_type() === 'class') : ?>
+            <?php
+            $start_time = get_field('start_time');
+            $end_time = get_field('end_time');
+            ?>
+
+            <p class="content-time"><?php the_field('class_info'); ?> - <?php echo $start_time . " to " . $end_time; ?></p>
+        <?php endif; ?>
+
         <div class="content">
             <?php the_content(); ?>
         </div>
