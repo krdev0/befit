@@ -19,13 +19,13 @@ function befit_classes_list()
                         <h3><?php the_title(); ?></h3>
                     </a>
 
-                    <p><?php the_field('class_info'); ?></p>
                     <?php
                     $start_time = get_field('start_time');
                     $end_time = get_field('end_time');
                     ?>
 
-                    <p><?php echo $start_time . " to " . $end_time; ?></p>
+                    <p><?php the_field('class_info'); ?> - <?php echo $start_time . " to " . $end_time; ?></p>
+
                 </div>
 
             </li>
