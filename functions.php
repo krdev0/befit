@@ -1,5 +1,6 @@
 <?php
 
+require get_template_directory() . '/inc/queries.php';
 
 /**
  * Action hooks

@@ -254,3 +254,26 @@ img {
         flex: 0 0 calc(40% - 2rem);
     }
 }
+
+/** Classes List **/
+.classes-list {
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .classes-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 calc(33% - 2rem);
+    }
+}
+
+.card {
+    margin-bottom: 4rem;
+}
