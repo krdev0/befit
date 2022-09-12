@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory() . '/inc/queries.php';
+require get_template_directory() . '/inc/widget.php';
 
 /**
  * Action hooks
@@ -26,7 +27,7 @@ function befit_scripts()
 {
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
 
-    wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Lato:wght@100;300;400;700&display=swap');
+    wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700;900&display=swap');
 
     wp_enqueue_style('slicknavcss', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.10');
 
