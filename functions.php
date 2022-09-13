@@ -61,7 +61,7 @@ function befit_widgets()
         'id' => 'sidebar',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
+        'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>'
     ));
 }

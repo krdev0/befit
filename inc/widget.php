@@ -24,9 +24,11 @@ class Befit_Classes_Widget extends WP_Widget
      */
     public function widget($args, $instance)
     {
-        echo $args['before_widget']; ?>
+        echo $args['before_widget'];
+        echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
+?>
 
-        <ul class="sitebar-class-list">
+        <ul class="sidebar-class-list">
             <?php
             $args = array(
                 'post_type' => 'class',
@@ -43,10 +45,10 @@ class Befit_Classes_Widget extends WP_Widget
                     </div>
                     <div class="widget-content">
                         <a href="<?php the_permalink(); ?>">
-                            <h3><?php the_title(); ?></h3>
+                            <h3 class="text-primary"><?php the_title(); ?></h3>
                         </a>
 
-                        <p class="content-time"><?php the_field('class_info'); ?> - <?php echo $start_time . " to " . $end_time; ?></p>
+                        <p><?php the_field('class_info'); ?> - <?php echo $start_time . " to " . $end_time; ?></p>
                     </div>
                 </li>
 
