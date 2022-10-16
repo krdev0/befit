@@ -264,12 +264,14 @@ img {
 }
 
 /** Classes List **/
-.classes-list {
+.classes-list,
+.blog-entries {
     margin-top: 4rem;
 }
 
 @media (min-width: 768px) {
-    .classes-list {
+    .classes-list,
+    .blog-entries {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -323,8 +325,34 @@ img {
     }
 }
 
+.card .card-content .blog-title {
+    font-size: 22px;
+    color:var(--primary);
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.card .card-content .blog-title:hover {
+    filter: brightness(90%);
+}
+
+.card .card-content .date-published {
+    color:white;
+    font-size: 16px;
+    font-weight: 300;
+}
+
 .card .card-content a {
     color: var(--black);
+}
+
+.card .card-content .post-author {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card .card-content .post-author a {
+    /* color:var(--primary); */
 }
 
 @media (min-width: 768px) {
@@ -338,6 +366,40 @@ img {
     font-weight: 700;
     font-size: 2rem;
     margin: 0;
+}
+
+/* Categories for posts card */
+.post-categories {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .post-categories {
+        position: absolute;
+        top:0;
+        left:2rem;
+        z-index: 10;
+    }
+}
+
+.post-categories li {
+    margin-right: 2rem;
+}
+
+.post-categories li:last-of-type {
+    margin-right: none;
+}
+
+.post-categories a {
+    color:var(--darkGray);
+    font-size: 1.6rem;
+    padding:.5rem 2rem;
+    background-color: var(--primary);
+    border-radius: .5rem;
+    color:var(--white);
+    font-weight: bold;
 }
 
 /** Single class styles **/
@@ -397,4 +459,50 @@ p.content-time {
     font-size: 1.6rem;
     font-weight: 500;
     margin: 0;
+}
+
+/* Contact form */
+.wpcf7-form p{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpcf7-form label{
+    flex: 0 0 100%;
+}
+
+.wpcf7-form span{
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wpcf7-form-control {
+    flex: 0 0 100%;
+    border:1px solid var(--lightGray);
+    padding:1rem;
+}
+
+.wpcf7-submit {
+    background-color: var(--primary);
+    font-size: 2rem;
+    color: var(--white);
+    padding:1.4rem;
+    font-weight: bold;
+}
+
+.wpcf7-submit:hover {
+    cursor: pointer;
+}
+
+.wpcf7-spinner {
+    background-color: transparent;
+    margin:0;
+    justify-content: center;
+}
+
+.wpcf7-spinner::before {
+    background-color:var(--primary);
+    top:2rem;
+    left:50%;
 }
