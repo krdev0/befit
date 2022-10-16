@@ -2,6 +2,7 @@
 
 require get_template_directory() . '/inc/queries.php';
 require get_template_directory() . '/inc/widget.php';
+require get_template_directory() . '/inc/cpt.php';
 
 /**
  * Action hooks
@@ -12,6 +13,10 @@ add_action('wp_enqueue_scripts', 'befit_scripts');
 add_action('after_setup_theme', 'befit_setup');
 add_action('widgets_init', 'befit_widgets');
 
+/**
+ * Filters
+ */
+add_filter( 'use_block_editor_for_post', '__return_false' );
 
 function befit_register_menu()
 {
